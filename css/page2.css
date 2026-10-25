@@ -129,7 +129,7 @@ transition: transform 0.4s;
 .Food-generale-countainer {
   width: 100%;
   padding: 50px;
-  background: url(page2photo/khachba.jpg);
+  background: url("../page2photo/khachba.jpg");
   height: 1765px;
   margin-top: -100px;
   display: block;
@@ -240,7 +240,7 @@ transition: transform 0.4s;
   width: 100%;  
   height: 910px;
   padding: 50px;
-  background:url(page2photo/img.png)  no-repeat center/cover;
+  background:url("../page2photo/img.png") no-repeat center/cover;
     background-repeat: no-repeat;
   margin-top: -100px;
    font-family: 'Segoe UI', sans-serif;
@@ -379,7 +379,7 @@ transition: transform 0.4s;
   width: 100%;  /*3ard div li fih les certe daudio*/
   padding: 40px;
   height: 1200px;
-  background:url(page2photo/bgroundvetement.jpg) ;
+  background:url("../page2photo/bgroundvetement.jpg");
    font-family: 'Segoe UI', sans-serif;
 }
 #dresspart {
@@ -469,7 +469,7 @@ transition: transform 0.4s;
 
 .carte-vetement:hover img{
   transform: scale(1.1);  /*3adad atdrb fih tswira bach tkbr*/
-  filter: brightness(50%); /
+  filter: brightness(50%);
 }
 
 
@@ -484,7 +484,7 @@ transition: transform 0.4s;
   width: 100%; 
   padding: 40px;
   height: 1000px;
-   background:url(page2photo/lor.png)  no-repeat center/cover;
+   background:url("../page2photo/lor.png") no-repeat center/cover;
    font-family: 'Segoe UI', sans-serif;
 }
 #tradpart {
@@ -607,124 +607,399 @@ small{
 
 /*======================================================================= media========================================================= */
 
-@media (max-width: 920px){
-
-
-  /* =========================nav================== */
-  .nav_menu {
- 
-  left: 5px;
-
-}
-
-
-.search{
-  display: none;
-}
- 
-/* ===============premier part de page ===================== */
-
-  .culturegenerale{
-  margin-top: -250px;
-  height: 900px;
+@media (max-width: 920px) {
+  body {
+    overflow-x: hidden;
   }
 
-    .aprenav{
-      height: 1000px;
-    }
-    .culturemaroc{margin-top: -690px;
-      font-size: 70px;
+  /* ========================= nav ================== */
+  nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    flex-wrap: wrap;
+    padding: 14px 16px 20px;
+    background: linear-gradient(180deg, rgba(8, 14, 24, 0.8) 0%, rgba(8, 14, 24, 0.45) 55%, rgba(8, 14, 24, 0) 100%);
+  }
 
-    }
-    .traditionintro{
-      font-size: 15px;
-      margin-bottom: 170px;
-    }
-    /* ===============come nav white==================== */
-    
-    .commenav img{
-      width: 50%;
-  
-    }
+  nav h3 {
+    font-size: 1.35rem;
+    margin: 0 !important;
+    padding: 0;
+    flex: 0 0 auto;
+    text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.75);
+  }
 
-    .guide{
-        height: 580px;
-        width: 350px;
-        margin-top: -100px;
-    }
-   /*=====================  partie food ================ */
+  .nav_menu {
+    position: static;
+    left: auto;
+    top: auto;
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    margin: 16px 0 0;
+    font-size: 15px;
+  }
 
-      #foodpar{
-      margin-top: 540px;
-    }
+  .nav_menu a {
+    text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.75);
+  }
 
-     .Food-generale-countainer{
-      align-items: center;
-      display: block;
-      margin-top: -550px;
-     }
-     .Food-generale-countainer .card{
-     width: 495px;
-     align-items: center;
-     justify-self: center;
-     font-size: 14px;
-     }
-     .Food-generale-countainer{
-      height: 2550px;
-      
-     }
+  .search,
+  .social-sidebar {
+    display: none;
+  }
 
-     .carte-right{
-      left: -300px;
-      margin-top: 10px;
-      margin-bottom: 10px;
-     }
-     .carte-derniere-left-tajine{
-      margin-top: 10px;
-     }
+  /* ============ image de fond + titre culture ============ */
+  .culturegenerale {
+    height: 360px;
+    margin-top: 0;
+    object-position: center 35%;
+  }
 
+  .culturemaroc {
+    margin-top: -200px;
+    font-size: clamp(34px, 11vw, 56px);
+    line-height: 1.1;
+    text-align: center;
+    text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.6);
+  }
 
-     /* ===========partie music======================= */
-     .music-generale-countainer{
-      height: auto;
-      
-    
-     }
-     .music-card{
-      width: 450px;
-      justify-self: center;
-     }
+  .culturemaroc :first-child {
+    margin-bottom: 0;
+  }
 
+  .traditionintro {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 14px;
+    margin-bottom: 0;
+    line-height: 1.6;
+    text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.7);
+  }
 
-     /* ===========part vetement============ */
-     .dress-generale-container{
-      height: 2610px;
-      
-     }
-     .carte-vetement{
-      height: 350px;
-      width: 300px;
-      justify-self: center;
-     }
-     .intro3{
-      margin-bottom: 10px;
-     }
+  /* ================= barre de navigation interne ================ */
+  .guide {
+    height: auto;
+    margin-top: 30px;
+    padding: 14px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
 
-/*  ================================== 3anawin =============== */
-  
-    #tradpart,#dresspart,#musicpart,#foodpar{
-      font-size: 50px;
-      text-align: center;
-      top: 10px;
-    }
-  
-/*  ===========================foter================== */
+  .guide .row {
+    margin: 0;
+  }
 
-.fot{
-  height: 730px;
+  .guide .commenav {
+    flex: 0 0 auto;
+    width: 100%;
+    padding: 8px 4px;
+  }
 
-}
+  .commenav img {
+    width: min(46vw, 110px);
+  }
 
+  .commenav > h3 {
+    font-size: 15px;
+  }
+
+  /* ===================== titres de sections ==================== */
+  #tradpart,
+  #dresspart,
+  #musicpart,
+  #foodpar {
+    font-size: clamp(30px, 10vw, 46px);
+    text-align: center;
+    margin-top: 40px !important;
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+  }
+
+  #tradpart span,
+  #dresspart span,
+  #musicpart span,
+  #foodpar span {
+    position: static;
+    margin-top: 0;
+  }
+
+  .intro1,
+  .intro2,
+  .intro3,
+  .intro4 {
+    font-size: 14px;
+    line-height: 1.7;
+    padding: 0 14px;
+    margin-top: 0;
+    margin-bottom: 34px;
+  }
+
+  /* ========================= partie food ====================== */
+  .Food-generale-countainer {
+    width: 100%;
+    height: auto;
+    padding: 10px 12px 40px;
+    margin-top: 0;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .Food-generale-countainer .card,
+  .carte-right,
+  .carte-derniere-left-tajine {
+    width: 100%;
+    height: auto;
+    margin: 0 0 26px;
+  }
+
+  .card-content,
+  .card-content.reverse {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+  }
+
+  .card-text {
+    flex: none;
+    order: 2;
+  }
+
+  .card-text h3 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .card-text p {
+    font-size: 14px;
+  }
+
+  .card-image {
+    flex: none;
+    order: 1;
+    width: 100%;
+    height: 200px;
+  }
+
+  .card-image img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card-image:hover img {
+    transform: none;
+  }
+
+  /* ========================= partie music ===================== */
+  .music-generale-countainer {
+    width: 100%;
+    height: auto;
+    padding: 10px 12px 40px;
+    margin-top: 0;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .music-generale-countainer .container {
+    width: 100%;
+    padding: 0;
+  }
+
+  .music-generale-countainer .col-md-6 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .music-card {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0 0 26px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .card-cd {
+    position: absolute;
+    top: -18px;
+    right: -12px;
+    left: auto;
+    width: 92px;
+    height: 92px;
+    opacity: 0.85;
+    z-index: 2;
+  }
+
+  .cover {
+    width: min(70vw, 230px);
+    height: min(70vw, 230px);
+  }
+
+  .music-text {
+    position: static;
+    width: 100%;
+    text-align: center;
+  }
+
+  .music-text h3 {
+    font-size: 22px;
+    margin: 0;
+    text-align: center;
+  }
+
+  .music-text p {
+    font-size: 14px;
+    margin: 6px 0 0;
+  }
+
+  .audio {
+    margin: 0;
+    width: 100%;
+  }
+
+  .audio audio {
+    width: 100%;
+  }
+
+  /* ======================== partie dress ====================== */
+  .dress-generale-container {
+    width: 100%;
+    height: auto;
+    padding: 10px 12px 40px;
+    margin-top: 0;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .dress-generale-container .container {
+    width: 100%;
+    padding: 0;
+  }
+
+  .dress-generale-container .col-md-4 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .carte-vetement {
+    width: 100%;
+    height: auto;
+    margin: 0 0 22px;
+    padding-bottom: 16px;
+  }
+
+  .image-vetement {
+    height: 230px;
+  }
+
+  .carte-vetement h3 {
+    position: static;
+    opacity: 1;
+    text-align: center;
+    margin: 14px 0 6px;
+    font-size: 22px;
+  }
+
+  .carte-vetement p {
+    position: static;
+    opacity: 1;
+    text-align: center;
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .carte-vetement:hover img {
+    transform: none;
+    filter: none;
+  }
+
+  /* ====================== partie tradition ==================== */
+  .Tradition-generale-container {
+    width: 100%;
+    height: auto;
+    padding: 10px 12px 40px;
+    margin-top: 0;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .container-scroll-part {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 14px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tradition {
+    flex: 0 0 auto;
+    width: min(78vw, 300px);
+    height: auto;
+    overflow: visible;
+    scroll-snap-align: center;
+  }
+
+  .tradition img {
+    height: 260px;
+  }
+
+  .descreption-photo {
+    position: static;
+    height: auto;
+    opacity: 1;
+    margin-top: -6px;
+    padding: 14px;
+    border-radius: 0 0 25px 25px;
+  }
+
+  .descreption-photo h3 {
+    margin-top: 0;
+    font-size: 20px;
+  }
+
+  .descreption-photo p {
+    font-size: 13px;
+  }
+
+  /* ============================ footer ======================== */
+  .fot {
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  .fot .container {
+    text-align: center;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .fot h3.row {
+    justify-content: center;
+    margin-left: 0 !important;
+  }
+
+  nav h3 .col-1,
+  .fot h3.row .col-1 {
+    flex: 0 0 auto;
+    width: auto;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+
+  .fot .btn-sm {
+    margin: 0 8px !important;
+  }
 }
 
   

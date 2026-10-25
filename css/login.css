@@ -1,7 +1,7 @@
 
 .login-page {
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                url('imag/sahrap1.jpg');
+                url("../imag/sahrap1.jpg");
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -18,7 +18,7 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 50px 40px;
     border-radius: 20px;
-    width: 400px;
+    width: min(400px, calc(100vw - 32px));
     text-align: center;
     box-shadow: 0 25px 50px rgba(0,0,0,0.3);
 }
@@ -107,4 +107,31 @@
     color: white;
     text-decoration: none;
     font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .login-page {
+        height: auto;
+        min-height: 100vh;
+        padding: 40px 16px;
+        background-attachment: scroll;
+    }
+
+    .login-box {
+        padding: 32px 20px;
+    }
+
+    .login-header h2 {
+        font-size: 26px;
+    }
+
+    .input-group input {
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
 }

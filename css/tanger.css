@@ -62,7 +62,7 @@ span a:hover {
 .tête {
     background:
         linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url("imag/tg1.jpg");
+        url("../imag/tg1.jpg");
     background-size: cover;
     background-attachment: fixed;
     height: 18cm;
@@ -672,148 +672,260 @@ nav ul li :hover {
 small{
   color: #8c6155;
 }
-@media (max-width: 700px) {
-    
-    nav {
-        flex-direction: row;
-        align-items: center;
-        height: auto;
-    }
 
-    .nav_menu {
-        position: static; 
-        flex-direction: row;
-        gap: 15px;
-        text-align: center;
-        padding: 20px 0;
-    }
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
 
-    .input1 {
-        position: static;
-        margin-bottom: 20px;
-        width: 80%;
-    }
+  nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    flex-wrap: wrap;
+    align-items: center;
+    height: auto;
+    padding: 14px 16px 20px;
+    background: linear-gradient(180deg, rgba(8, 14, 24, 0.78) 0%, rgba(8, 14, 24, 0.45) 55%, rgba(8, 14, 24, 0) 100%);
+  }
 
-    .tête {
-        height: auto;
-        padding-bottom: 50px;
-        background-size: cover;
-        background-position: center;
-    }
+  nav h3 {
+    font-size: 1.35rem;
+    margin: 0 !important;
+    padding: 0;
+    flex: 0 0 auto;
+    text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.75);
+  }
 
-    .tanger {
-        font-size: 45px; 
-        letter-spacing: 10px;
-        margin-left: 0;
-        text-align: center;
-    }
+  .nav_menu {
+    position: static;
+    left: auto;
+    top: auto;
+    order: 3;
+    width: 100%;
+    margin: 16px 0 0;
+    padding: 0;
+    font-size: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 16px;
+  }
 
-    .descreption {
-        width: 90%;
-        margin: 20px auto;
-        height: auto;
-    }
+  .nav_menu a {
+    text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.75);
+  }
 
-    .dv2 {
-        flex-direction: column;
-        margin-bottom: 0;
-        padding: 20px;
-    }
+  .search,
+  .input1,
+  .social-sidebar {
+    display: none;
+  }
 
-    .localisation, .Histoire {
-        width: 100% !important;
-        margin-left: 0 !important;
-        margin-top: 20px !important;
-        height: auto !important;
-    }
+  .marrakeck,
+  .casa,
+  .rabat,
+  .tanger {
+    font-size: clamp(26px, 8vw, 42px) !important;
+    letter-spacing: 4px;
+    margin-left: 0 !important;
+    margin-top: 30px !important;
+    text-align: center;
+  }
 
-    .map {
-        margin-left: 0;
-        text-align: center;
-        margin-top: 50px;
-    }
+  .tête {
+    height: auto !important;
+    min-height: 100vh;
+    margin-top: 0;
+    padding: 190px 16px 60px;
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
+  }
 
-    .map img:first-child {
-        width: 90%; 
-    }
-    .pos {
-        margin-left: 245px;
-        margin-top: 5px;
-    }
+  .descreption {
+    width: min(92%, 520px);
+    height: auto;
+    margin: 24px auto 0 !important;
+    padding: 18px;
+    font-size: 15px;
+  }
 
-    .dv {
-        flex-direction: column;
-        margin-left: 0;
-        align-items: center;
-        margin-top: 20px;
-        height: auto;
-    }
+  .slice {
+    display: block;
+    margin: 34px auto 0 !important;
+    transform: none;
+    font-size: 20px;
+  }
 
-    .statistiques, .statistiques1, .statistiques2, .statistiques3 {
-        position: static;
-        width: 90% !important;
-        margin: 10px 0 !important;
-        left: 0 !important;
-        transform: none !important;
-    }
+  .dv2 {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 24px !important;
+    margin: 40px 0 0 !important;
+    padding: 0 16px;
+  }
 
-    .dv:hover .statistiques1, 
-    .dv:hover .statistiques2, 
-    .dv:hover .statistiques3 {
-        transform: none; 
-    }
+  .dv2 > .card,
+  .Localisation,
+  .localisation,
+  .Histoire {
+    width: 100% !important;
+    max-width: 520px;
+    height: auto !important;
+    margin: 0 !important;
+  }
 
-    .mn1, .mn2 {
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 50px;
-        text-align: center;
-    }
-     .mn1 {
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 300px;
-        text-align: center;
-    }
+  .dv2 .card-header h1 {
+    font-size: 24px;
+  }
 
-    .img3, .img4, .img5, .img6, .img7, .img8 {
-        position: static;
-        width: 44px;
-        height: auto;
-        margin: 10px auto !important;
-        left: 0 !important;
-    }
+  .map {
+    position: relative;
+    width: min(92%, 520px);
+    margin: 50px auto 0 !important;
+    text-align: center;
+  }
 
-    .groupe-image1, .groupe-image2 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+  .map img {
+    max-width: 100%;
+    height: auto;
+  }
 
+  .pos {
+    left: auto !important;
+    margin-left: 0 !important;
+  }
 
-    .d-flex.flex-row.justify-content-between {
-        flex-direction: column !important;
-        align-items: center;
-    }
+  .dv {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px;
+    position: relative;
+    width: min(92%, 420px);
+    margin: 50px auto 0 !important;
+    height: auto;
+  }
 
-    .hotel1 {
-        width: 90% !important;
-        margin: 20px 0 !important;
-    }
+  .statistiques,
+  .statistiques1,
+  .statistiques2,
+  .statistiques3 {
+    position: relative !important;
+    left: auto !important;
+    width: 100% !important;
+    margin: 0 !important;
+    transform: none !important;
+  }
 
-    .hotel {
-        margin-top: 50px;
-        text-align: center;
-    }
+  .dv:hover .statistiques1,
+  .dv:hover .statistiques2,
+  .dv:hover .statistiques3 {
+    transform: none;
+  }
 
-    .social-sidebar {
-        display: none; 
-    }
+  .groupe-image1,
+  .groupe-image2 {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 18px;
+    margin-top: 50px;
+  }
 
-    .fot {
-        height: auto;
-        padding-bottom: 50px;
-    }
+  .img3,
+  .img4,
+  .img5,
+  .img6,
+  .img7,
+  .img8 {
+    position: relative !important;
+    left: auto !important;
+    width: min(88vw, 320px) !important;
+    height: 240px !important;
+    object-fit: cover;
+    margin: 0 auto !important;
+    flex: 0 0 auto;
+  }
+
+  .mn1,
+  .mn2 {
+    position: relative;
+    width: min(92vw, 520px);
+    margin: 0 auto !important;
+    padding: 0 16px;
+    text-align: center;
+  }
+
+  .mn1 h2,
+  .mn2 h2 {
+    font-size: 24px;
+  }
+
+  .d-flex.flex-row.justify-content-between {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 24px;
+    padding: 0 16px;
+    margin-top: 60px;
+  }
+
+  .hotel1 {
+    width: 100% !important;
+    max-width: 420px;
+    margin: 0 0 30px !important;
+  }
+
+  .image-hotel {
+    width: 100%;
+    height: auto;
+    max-height: 260px;
+    object-fit: cover;
+  }
+
+  .hotel {
+    margin-top: 20px !important;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .reservation {
+    width: auto !important;
+    max-width: 100%;
+    margin: 0 auto 18px !important;
+    display: inline-block;
+  }
+
+  .fot {
+    position: static;
+    height: auto;
+    margin-top: 60px;
+    padding: 40px 0 20px;
+  }
+
+  .fot .container {
+    text-align: center;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .fot h3.row {
+    justify-content: center;
+    margin-left: 0 !important;
+  }
+
+  nav h3 .col-1,
+  .fot h3.row .col-1 {
+    flex: 0 0 auto;
+    width: auto;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+
+  .fot .btn-sm {
+    margin: 0 8px !important;
+  }
 }
